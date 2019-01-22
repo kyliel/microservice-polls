@@ -10,15 +10,14 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.example.polls.service.CustomUserDetailsService;
+
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by rajeevkumarsingh on 19/08/17.
- */
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Autowired

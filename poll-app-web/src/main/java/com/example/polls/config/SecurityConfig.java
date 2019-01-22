@@ -1,8 +1,9 @@
 package com.example.polls.config;
 
-import com.example.polls.security.CustomUserDetailsService;
 import com.example.polls.security.JwtAuthenticationEntryPoint;
 import com.example.polls.security.JwtAuthenticationFilter;
+import com.example.polls.service.CustomUserDetailsService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,11 +19,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
-
-/**
- * Created by rajeevkumarsingh on 01/08/17.
- */
 
 @Configuration
 @EnableWebSecurity

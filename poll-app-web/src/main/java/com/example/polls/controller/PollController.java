@@ -19,12 +19,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 
-/**
- * Created by rajeevkumarsingh on 20/11/17.
- */
-
 @RestController
 @RequestMapping("/api/polls")
+@SuppressWarnings("unused")
 public class PollController {
 
     @Autowired
