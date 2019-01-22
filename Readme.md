@@ -14,7 +14,7 @@ I've written a complete tutorial series for this application on The CalliCoder B
 
 + [Part 4: Building the front-end using React and Ant Design](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-4/)
 
-## Steps to Setup the Spring Boot Back end app (polling-app-server)
+## Steps to Setup the Spring Boot Server
 
 1. **Clone the application**
 
@@ -24,7 +24,7 @@ I've written a complete tutorial series for this application on The CalliCoder B
 	```
 
 
-3. **Set MySQL hostnmae and password as per your MySQL installation**
+3. **Set MySQL hostname and password as per your MySQL installation**
 
 	+ set `MYSQL_HOST` and `MYSQL_PASSWORD` environment variables as per your mysql installation(the username is `root`), see see `poll-app-web/src/main/resources/application.yaml` file for details.
 	
@@ -34,6 +34,8 @@ I've written a complete tutorial series for this application on The CalliCoder B
 	You can run the spring boot app by typing the following command -
 
 	```bash
+	mvn install
+    cd poll-app-web
 	mvn spring-boot:run
 	```
 
@@ -43,31 +45,5 @@ I've written a complete tutorial series for this application on The CalliCoder B
 
 	```bash
 	mvn package
-	java -jar target/polls-0.0.1-SNAPSHOT.jar
+	java -jar poll-app-web/target/poll-app-web-0.1.0.jar
 	```
-5. **Add the default Roles**
-	
-	The spring boot app uses role based authorization powered by spring security. Please execute the following sql queries in the database to insert the `USER` and `ADMIN` roles.
-
-	```sql
-	INSERT INTO roles(name) VALUES('ROLE_USER');
-	INSERT INTO roles(name) VALUES('ROLE_ADMIN');
-	```
-
-	Any new user who signs up to the app is assigned the `ROLE_USER` by default.
-
-## Steps to Setup the React Front end app (polling-app-client)
-
-First go to the `polling-app-client` folder -
-
-```bash
-cd polling-app-client
-```
-
-Then type the following command to install the dependencies and start the application -
-
-```bash
-npm install && npm start
-```
-
-The front-end server will start on port `3000`.
