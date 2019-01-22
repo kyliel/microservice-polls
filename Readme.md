@@ -19,21 +19,15 @@ I've written a complete tutorial series for this application on The CalliCoder B
 1. **Clone the application**
 
 	```bash
-	git clone https://github.com/callicoder/spring-security-react-ant-design-polls-app.git
-	cd polling-app-server
+	git clone https://github.com/kyliel/microservice-polls
+	cd microservice-polls
 	```
 
-2. **Create MySQL database**
 
-	```bash
-	create database polling_app
-	```
+3. **Set MySQL hostnmae and password as per your MySQL installation**
 
-3. **Change MySQL username and password as per your MySQL installation**
-
-	+ open `src/main/resources/application.properties` file.
-
-	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your mysql installation
+	+ set `MYSQL_HOST` and `MYSQL_PASSWORD` environment variables as per your mysql installation(the username is `root`), see see `poll-app-web/src/main/resources/application.yaml` file for details.
+	
 
 4. **Run the app**
 
